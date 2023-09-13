@@ -1,10 +1,5 @@
-# React + Vite - template
+# Test project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Car rental application.
 
-This template include reset styles in index.css.
-
-On GitHub in Action/General -> Workflow permissions set read and write permissions and Allow GiitHub Actions
-
-Deploy on GitHub -> branch gh-pages
-(vite.config.js -> base change to your repository name)
+find the best option that suits you, select the car according to its parameters and book it
