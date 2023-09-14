@@ -1,4 +1,3 @@
-import "./App.css";
 import { lazy } from "react";
 
 import {
@@ -28,16 +27,7 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-    // <Routes>
-    //   <Route path="/" element={<SharedLayout />}>
-    //     <Route index element={<MainPage />} />
-    //     <Route path="catalog" element={<CatalogPage />} />
-    //     <Route path="favorites" element={<FavoritesPage />} />
-    //   </Route>
-    // </Routes>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

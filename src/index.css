@@ -39,7 +39,8 @@ ol {
   list-style: none;
 }
 
-a:not([class]) {
+a {
+  text-decoration: none;
   text-decoration-skip-ink: auto;
 }
 

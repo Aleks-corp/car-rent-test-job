@@ -2,16 +2,19 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-import { LayoutContainer } from "./SharedLayout.styled";
-import NavBar from "../NavBar/NavBar";
+import { LayoutContainer, Main } from "./SharedLayout.styled";
+
+import { Header } from "../Header/Header";
 
 const SharedLayout = () => {
   return (
     <LayoutContainer>
-      <NavBar />
-      <Suspense fallback={null}>
-        <Outlet />
-      </Suspense>
+      <Header />
+      <Main>
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
+      </Main>
       <Toaster position="top-right" reverseOrder={false} />
     </LayoutContainer>
   );
