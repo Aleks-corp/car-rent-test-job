@@ -1,1 +1,0 @@
-import{j as t}from"./index-1e6184e2.js";import{S as r}from"./Section-38902b23.js";const e=()=>t.jsxs(t.Fragment,{children:[t.jsx("img",{}),t.jsx("p",{children:"About"})]}),i=()=>t.jsx(r,{title:"Car Rent",children:t.jsx(e,{})});export{i as default};
