@@ -1,0 +1,1 @@
+import{j as t}from"./main-62cd448c.js";import{S as e}from"./Section-acc070c8.js";const n=()=>t.jsxs(t.Fragment,{children:[t.jsx("img",{}),t.jsx("p",{children:"About"})]});function r(){return t.jsx(e,{title:"Car Rent",children:t.jsx(n,{})})}r.displayName="HomePage";export{r as Component};
