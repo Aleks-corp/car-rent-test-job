@@ -1,0 +1,1 @@
+import{_ as a}from"./preload-helper-d5f4e490.js";const r="/src/main.jsx";a(()=>import(r),[]).then(({createApp:t})=>{const{app:o}=t();o.config.globalProperties.$route={fullPath:window.location.pathname},o.mount("#app")}).catch(console.error);
