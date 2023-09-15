@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Section } from "../components/Section/Section";
 import { fetchAllCars } from "../api/axios";
 
-const CatalogPage = () => {
+export function Component() {
   const [cars, setCars] = useState([]);
   // const [filteredCars, setFilteredCars] = useState([]);
   const fetch = async () => {
@@ -36,7 +36,6 @@ const CatalogPage = () => {
       </>
     </Section>
   );
-};
-export default CatalogPage;
+}
 
-CatalogPage.displayName = "Car catalog";
+Component.displayName = "CarCatalog";

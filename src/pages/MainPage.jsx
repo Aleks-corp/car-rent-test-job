@@ -1,11 +1,12 @@
 import { CompanyDescription } from "../components/CompanyDescription/CompanyDescription";
 import { Section } from "../components/Section/Section";
 
-const MainPage = () => {
+export function Component() {
   return (
     <Section title="Car Rent">
       <CompanyDescription />
     </Section>
   );
-};
-export default MainPage;
+}
+
+Component.displayName = "HomePage";

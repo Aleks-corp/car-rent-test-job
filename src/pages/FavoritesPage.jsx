@@ -1,4 +1,5 @@
-const FavoritesPage = () => {
+export function Component() {
   return <div>FavoritesPage</div>;
-};
-export default FavoritesPage;
+}
+
+Component.displayName = "FavoritesPage";
