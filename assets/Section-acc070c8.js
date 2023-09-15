@@ -1,0 +1,5 @@
+import{g as h,s,j as n}from"./main-62cd448c.js";var a={exports:{}},l="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED",m=l,u=m;function i(){}function c(){}c.resetWarningCache=i;var T=function(){function e(S,g,P,v,_,y){if(y!==u){var o=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw o.name="Invariant Violation",o}}e.isRequired=e;function t(){return e}var r={array:e,bigint:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:c,resetWarningCache:i};return r.PropTypes=r,r};a.exports=T();var f=a.exports;const p=h(f),d=s.section`
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+`,x=s.h1``,R=({title:e,children:t})=>n.jsxs(d,{children:[e&&n.jsx(x,{children:e}),t]});R.propTypes={title:p.string,children:p.node.isRequired};export{R as S};
