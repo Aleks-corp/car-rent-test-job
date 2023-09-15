@@ -38,3 +38,5 @@ const CatalogPage = () => {
   );
 };
 export default CatalogPage;
+
+CatalogPage.displayName = "Car catalog";

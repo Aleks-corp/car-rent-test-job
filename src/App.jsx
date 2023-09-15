@@ -1,5 +1,3 @@
-import { lazy } from "react";
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -10,16 +8,16 @@ import {
 import SharedLayout from "./components/SharedLayout/SharedLayout";
 import ErrorPage from "./pages/ErrorPage";
 
-const MainPage = lazy(() => import("./pages/MainPage"));
-const CatalogPage = lazy(() => import("./pages/CatalogPage"));
-const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
+// const MainPage = lazy(() => import("./pages/MainPage"));
+// const CatalogPage = lazy(() => import("./pages/CatalogPage"));
+// const FavoritesPage = lazy(() => import("./pages/FavoritesPage"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<SharedLayout />}>
-      <Route index element={<MainPage />} />
-      <Route path="catalog" element={<CatalogPage />} />
-      <Route path="favorites" element={<FavoritesPage />} />
+      <Route index lazy={() => import("./pages/MainPage")} />
+      <Route path="catalog" lazy={() => import("./pages/CatalogPage")} />
+      <Route path="favorites" lazy={() => import("./pages/FavoritesPage")} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   ),
