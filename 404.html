@@ -7,23 +7,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module">
-      // Шлях до вашого Vite додатку
-      const appPath = "/src/main.jsx";
-
-      import(appPath)
-        .then(({ createApp }) => {
-          // Створіть тут ваше React додаток, якщо це потрібно
-          const { app } = createApp();
-          // Встановіть шлях, якщо він є в URL
-          app.config.globalProperties.$route = {
-            fullPath: window.location.pathname,
-          };
-          // Монтуйте додаток
-          app.mount("#app");
-        })
-        .catch(console.error);
-    </script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
 
