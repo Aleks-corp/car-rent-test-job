@@ -1,4 +1,4 @@
-import{s as t,j as e,u as l}from"./main-ac88dced.js";import{B as g,S as h}from"./Section-62221813.js";const m="/car-rent-test-job/assets/majesticons_shield-4b918591.svg",x="/car-rent-test-job/assets/game-icons_gps-e7b2b96d.svg",u="/car-rent-test-job/assets/icon-park-outline_baby-car-seat-78187581.svg",j="/car-rent-test-job/assets/ep_service-06ed59c7.svg",v=t.div`
+import{s as t,j as e,u as l}from"./main-f7b9c029.js";import{B as g,S as h}from"./Section-4c6b6cf5.js";const m="/car-rent-test-job/assets/majesticons_shield-4b918591.svg",x="/car-rent-test-job/assets/game-icons_gps-e7b2b96d.svg",u="/car-rent-test-job/assets/icon-park-outline_baby-car-seat-78187581.svg",j="/car-rent-test-job/assets/ep_service-06ed59c7.svg",v=t.div`
   display: flex;
   width: 100%;
   justify-content: center;
