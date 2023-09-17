@@ -1,1 +1,0 @@
-import{j as e}from"./main-f533a4df.js";import{S as o}from"./Section-67c3eed9.js";function r(){return e.jsx(o,{children:e.jsx("div",{children:"FavoritesPage"})})}r.displayName="FavoritesPage";export{r as Component};
