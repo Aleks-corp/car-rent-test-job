@@ -7,8 +7,12 @@ export const filterCarCatalog = (filter, data) => {
         ? parseInt(filter.price[0]) <= parseInt(item.rentalPrice.slice(1)) &&
           parseInt(item.rentalPrice.slice(1)) < parseInt(filter.price[1])
         : true) &&
-      (filter.mileFrom ? item.mileage >= parseInt(filter.mileFrom) : true) &&
-      (filter.mileTo ? item.mileage <= parseInt(filter.mileTo) : true)
+      (filter.mileFrom
+        ? item.mileage >= parseInt(filter.mileFrom.replace(",", ""))
+        : true) &&
+      (filter.mileTo
+        ? item.mileage <= parseInt(filter.mileTo.replace(",", ""))
+        : true)
     ) {
       filterCars.push(item);
     }

@@ -95,6 +95,8 @@ export const ConditionContainer = styled.div`
 
 export const ConditionItem = styled.p`
   padding: 7px 14px;
+  border-radius: 35px;
+  background-color: #f9f9f9;
   color: #363535;
   font-size: 12px;
   font-weight: 400;

@@ -79,23 +79,41 @@ export const FilterForm = () => {
       <InputWraper>
         <InputFrom
           type="text"
-          pattern="[0-9]{3,5}"
           maxLength="5"
           value={mileFrom}
           onChange={(e) => {
             errorInput(e.target.value);
-            setMileFrom(e.target.value);
+            if (e.target.value === "") {
+              setMileFrom(e.target.value);
+              return;
+            }
+            if (!isNaN(e.target.value.replace(",", ""))) {
+              setMileFrom(
+                parseInt(e.target.value.replace(",", "")).toLocaleString(
+                  "En-en"
+                )
+              );
+            }
           }}
         />
         <InputPlaceholderFrom>From</InputPlaceholderFrom>
         <InputTo
           type="text"
-          pattern="[0-9]{3,5}"
           maxLength="5"
           value={mileTo}
           onChange={(e) => {
             errorInput(e.target.value);
-            setMileTo(e.target.value);
+            if (e.target.value === "") {
+              setMileTo(e.target.value);
+              return;
+            }
+            if (!isNaN(e.target.value.replace(",", ""))) {
+              setMileTo(
+                parseInt(e.target.value.replace(",", "")).toLocaleString(
+                  "En-en"
+                )
+              );
+            }
           }}
         />
         <InputPlaceholderTo>To</InputPlaceholderTo>
