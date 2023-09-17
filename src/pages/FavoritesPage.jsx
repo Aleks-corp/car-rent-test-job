@@ -1,5 +1,11 @@
+import { Section } from "../components/Section/Section";
+
 export function Component() {
-  return <div>FavoritesPage</div>;
+  return (
+    <Section>
+      <div>FavoritesPage</div>
+    </Section>
+  );
 }
 
 Component.displayName = "FavoritesPage";

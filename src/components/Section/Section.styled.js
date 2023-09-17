@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const SectionContainer = styled.section`
   display: flex;
-  width: 250px;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 20px 0 30px;
 `;
 
 export const Title = styled.h1``;

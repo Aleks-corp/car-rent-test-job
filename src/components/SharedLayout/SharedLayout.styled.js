@@ -11,6 +11,7 @@ export const LayoutContainer = styled.div`
 
 export const Main = styled.main`
   overflow: auto;
-  scrollbar-color: rgba(52, 112, 255, 1);
+  overflow-x: hidden;
+  scrollbar-color: #0b44cd;
   scrollbar-width: thin;
 `;

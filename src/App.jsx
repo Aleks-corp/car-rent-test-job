@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import SharedLayout from "./components/SharedLayout/SharedLayout";
+import { fetchAllCars } from "./api/axios";
 
 // const MainPage = lazy(() => import("./pages/MainPage"));
 // const CatalogPage = lazy(() => import("./pages/CatalogPage"));
@@ -30,6 +31,7 @@ let router = createBrowserRouter(
         },
         {
           path: "catalog",
+          loader: () => fetchAllCars(),
           lazy: () => import("./pages/CatalogPage"),
         },
         {

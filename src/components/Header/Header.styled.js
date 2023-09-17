@@ -15,10 +15,10 @@ export const CallLink = styled.a`
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
-  background-color: rgba(11, 68, 205, 1);
+  background-color: #3470ff;
 
   &:hover,
   &:focus {
-    background-color: rgba(52, 112, 255, 1);
+    background-color: #0b44cd;
   }
 `;

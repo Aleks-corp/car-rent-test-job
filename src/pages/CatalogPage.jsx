@@ -1,39 +1,48 @@
 import { useEffect, useState } from "react";
+import { CatalogList } from "../components/CatalogList/CatalogList";
+import { FilterForm } from "../components/FilterForm/FilterForm";
 import { Section } from "../components/Section/Section";
-import { fetchAllCars } from "../api/axios";
+import { useLoaderData } from "react-router-dom";
+import { setUniqueMake } from "../helpers/setUniqueMake";
+import { filterCarCatalog } from "../helpers/filterCarCatalog";
 
 export function Component() {
-  const [cars, setCars] = useState([]);
-  // const [filteredCars, setFilteredCars] = useState([]);
-  const fetch = async () => {
-    const data = await fetchAllCars();
-    console.log("data:", data);
-    setCars(data);
-  };
+  const data = useLoaderData();
+
+  const [filteredCatalog, setFilteredCatalog] = useState(data);
+  const [makeOption, setMakeOption] = useState([]);
+
   useEffect(() => {
-    fetch();
-  }, []);
+    const selectMake = setUniqueMake(data);
+    setMakeOption(selectMake);
+  }, [data]);
+
+  const onSubmitSearch = (e) => {
+    e.preventDefault();
+    const filter = {
+      make: e.target[1].value,
+      price: e.target[3].value.split("-"),
+      mileFrom: e.target[4].value,
+      mileTo: e.target[5].value,
+    };
+
+    if (
+      !filter.make &&
+      filter.price.length === 1 &&
+      !filter.mileFrom &&
+      !filter.mileTo
+    ) {
+      setFilteredCatalog(data);
+      return;
+    }
+    const filterCars = filterCarCatalog(filter, data);
+    setFilteredCatalog(filterCars);
+  };
 
   return (
     <Section>
-      <>
-        <form>
-          <input />
-          <input />
-          <input />
-          <input />
-        </form>
-        {cars.length === 0 ? (
-          <p>Loading</p>
-        ) : (
-          cars.map((item) => (
-            <li key={item.id}>
-              <img src={item.img} width="300" />
-              <p>{`${item.make} ${item.model}`}</p>
-            </li>
-          ))
-        )}
-      </>
+      <FilterForm makeOption={makeOption} onSubmit={onSubmitSearch} />
+      <CatalogList items={filteredCatalog} />
     </Section>
   );
 }
