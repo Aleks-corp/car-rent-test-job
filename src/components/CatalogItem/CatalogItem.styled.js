@@ -31,6 +31,7 @@ export const Image = styled.img`
   border-radius: 14px;
 `;
 export const FavoritesIconContainer = styled.button`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

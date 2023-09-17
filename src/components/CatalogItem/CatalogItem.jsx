@@ -52,7 +52,11 @@ export const CatalogItem = ({ item, favoriteIcon }) => {
               : () => dispatch(removeFromFavorites(item.id))
           }
         >
-          {favoriteIcon ? <FaHeart /> : <FiHeart />}
+          {favoriteIcon ? (
+            <FaHeart />
+          ) : (
+            <FiHeart color="rgba(255, 255, 255, 0.80)" />
+          )}
         </FavoritesIconContainer>
       </ImageContainer>
       <TitleContainer>
