@@ -1,7 +1,7 @@
-import Economy from "../../assets/image1.png";
-import Business from "../../assets/image2.png";
-import OverRoad from "../../assets/image3.png";
-import Minivant from "../../assets/image4.png";
+import Economy from "../../assets/car-rent-icon/image1.png";
+import Business from "../../assets/car-rent-icon/image2.png";
+import OverRoad from "../../assets/car-rent-icon/image3.png";
+import Minivant from "../../assets/car-rent-icon/image4.png";
 import {
   RentContainer,
   Image,

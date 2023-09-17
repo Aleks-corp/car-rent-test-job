@@ -13,7 +13,7 @@ export const RentCarTitle = styled.h1`
   margin-top: 46px;
   color: #000;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1.6px;
 `;
@@ -32,7 +32,7 @@ export const Image = styled.img`
 export const Title = styled.p`
   color: #000;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.96px;
   text-transform: uppercase;
@@ -42,7 +42,7 @@ export const Title = styled.p`
 export const TitleAccent = styled.p`
   color: #3470ff;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.96px;
   text-transform: uppercase;
