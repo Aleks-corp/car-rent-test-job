@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { PRICE_LIST } from "../../constants/priceList";
 import {
   Btn,
@@ -20,6 +20,8 @@ import { filteredCatalog } from "../../redux/catalog/catalogSlice";
 export const FilterForm = () => {
   const items = useSelector(selectCatalogList);
   const dispatch = useDispatch();
+  const selectMakeRef = useRef();
+  const selectPriceRef = useRef();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -42,13 +44,16 @@ export const FilterForm = () => {
     const filterCars = filterCarCatalog(filter, items);
     dispatch(filteredCatalog(filterCars));
   };
-
+  const [make, setMake] = useState(null);
+  const [price, setPrice] = useState(null);
   const [mileFrom, setMileFrom] = useState("");
   const [mileTo, setMileTo] = useState("");
   const [error, setError] = useState("");
   const [makeOption, setMakeOption] = useState([]);
 
   useEffect(() => {
+    selectMakeRef.current.clearValue();
+    selectPriceRef.current.clearValue();
     const selectMake = setUniqueMake(items);
     setMakeOption(selectMake);
   }, [items]);
@@ -62,17 +67,25 @@ export const FilterForm = () => {
   return (
     <Form onSubmit={onSubmit}>
       <StyledSelect
+        ref={selectMakeRef}
         classNamePrefix="SelectMake"
         placeholder="Enter the text"
         isClearable={true}
         isSearchable={true}
+        value={make}
+        onChange={(e) => {
+          setMake(e);
+        }}
         name="make"
         options={makeOption}
       />
       <StyledSelect
+        ref={selectPriceRef}
         classNamePrefix="SelectPrice"
         placeholder="To $"
         isClearable={true}
+        value={price}
+        onChange={(e) => setPrice(e)}
         name="price"
         options={PRICE_LIST}
       />
