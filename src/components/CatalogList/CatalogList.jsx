@@ -54,7 +54,9 @@ export const CatalogList = () => {
           ))}
         </CatalogContainer>
       )}
-      {totalPages > page && <Btn onClick={loadMore}>Load More</Btn>}
+      {totalPages > page && !isLoading && (
+        <Btn onClick={loadMore}>Load More</Btn>
+      )}
     </>
   );
 };
