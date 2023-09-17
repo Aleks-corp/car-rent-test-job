@@ -13,6 +13,7 @@ export const Btn = styled.button`
 
   &:hover,
   &:focus {
+    outline: none;
     background-color: #0b44cd;
   }
 `;
