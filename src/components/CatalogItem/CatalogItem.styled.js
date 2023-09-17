@@ -30,6 +30,21 @@ export const Image = styled.img`
   object-fit: cover;
   border-radius: 14px;
 `;
+export const FavoritesIconContainer = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 6;
+  top: 14px;
+  right: 14px;
+  width: 18px;
+  height: 18px;
+  color: #3470ff;
+`;
 
 export const TitleContainer = styled.div`
   display: flex;

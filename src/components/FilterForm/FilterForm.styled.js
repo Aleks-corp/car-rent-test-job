@@ -126,6 +126,7 @@ export const StyledSelect = styled(Select)`
   .SelectMake__menu-list,
   .SelectPrice__menu-list {
     background-color: #f7f7fb;
+    height: 200px;
     padding: 0;
   }
   .SelectMake__option,

@@ -38,3 +38,11 @@ export const Btn = styled.button`
     color: #0b44cd;
   }
 `;
+
+export const ErrorTitle = styled.p`
+  padding: 60px 0 120px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3470ff;
+  line-height: 1.5;
+`;
