@@ -1,9 +1,11 @@
 import { CompanyDescription } from "../components/CompanyDescription/CompanyDescription";
+import { HomeRentCar } from "../components/HomeRentCar/HomeRentCar";
 import { Section } from "../components/Section/Section";
 
 export function Component() {
   return (
-    <Section title="Car Rent">
+    <Section>
+      <HomeRentCar />
       <CompanyDescription />
     </Section>
   );

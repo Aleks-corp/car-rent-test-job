@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { initialCatalogState } from "./initialState";
-import { getAllCars, getById } from "./thunk";
+import { getAllCars } from "./thunk";
 
 const handlePending = (state) => {
   state.error = null;
@@ -15,11 +15,6 @@ const handleFulfilledFetchCatalog = (state, action) => {
   state.catalogList = action.payload;
   state.filteredCatalog = action.payload;
   state.isLoading = false;
-};
-
-const handleFulfilledGetById = (state, action) => {
-  state.selectedItem = action.payload;
-  state.isLoadingAdd = false;
 };
 
 const catalogSlice = createSlice({
@@ -46,11 +41,7 @@ const catalogSlice = createSlice({
     builder
       .addCase(getAllCars.pending, handlePending)
       .addCase(getAllCars.fulfilled, handleFulfilledFetchCatalog)
-      .addCase(getAllCars.rejected, handleRejected)
-
-      .addCase(getById.pending, handlePending)
-      .addCase(getById.fulfilled, handleFulfilledGetById)
-      .addCase(getById.rejected, handleRejected);
+      .addCase(getAllCars.rejected, handleRejected);
   },
 });
 export const { filteredCatalog, isShownModal, setModalItem } =

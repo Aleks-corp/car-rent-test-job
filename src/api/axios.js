@@ -7,8 +7,3 @@ export const fetchAllCars = async () => {
   const { data } = await instance.get("/cars");
   return data;
 };
-
-export const fetchCarById = async (id) => {
-  const data = await instance.get(`/cars/${id}`);
-  return data;
-};
