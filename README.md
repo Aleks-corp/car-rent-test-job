@@ -3,6 +3,8 @@
 ## Car rental application.
 
 Find the best option that suits you, select the car according to its parameters and book it.
+[Click to view app](https://aleks-corp.github.io/car-rent-test-job/)
+
 
 Lib:
 
